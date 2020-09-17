@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h2>CLicando {{ contador }} vezes.</h2>
+        <h2>Clicando {{ contador }} vezes.</h2>
         <button @click="incrementar">Incrementar</button> 
     </div>
 </template>

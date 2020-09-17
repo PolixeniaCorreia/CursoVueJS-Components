@@ -1,50 +1,10 @@
 import Vue from 'vue'
 
-/*Vue.component('pcs-component', {
-   data: function () {
-      return {
-         titulo: 'Curso VUEJS',
-         contador: 0
-      }
-   },
-   methods: {
-      incrementar: function () {
-         this.contador++
-      }
-   },
-   template: `
-   <div>
-   <h1> {{ titulo }} </h1>
-   <button @click="incrementar"> Clicado {{ contador }} vezes. </button>
-   </div> `
-})
-*/
+import App from './App.vue'
+// import AppContador from './AppContador.vue'
 
-const pcsComponent = {
-   data: function () {
-      return {
-         titulo: 'Curso VUEJS',
-         contador: 0
-      }
-   },
-   methods: {
-      incrementar: function () {
-         this.contador++
-      }
-   },
-   template: `
-   <div>
-   <h1> {{ titulo }} </h1>
-   <button @click="incrementar"> Clicado {{ contador }} vezes. </button>
-   </div> `
-}
+// Vue.component('app-contador', AppContador)
 
 new Vue({
-   el: '#app1',
-   components: {
-      'pcs-component': pcsComponent 
-   }
-}),
-new Vue({
-   el: '#app2'
-})
+   render: h => h(App)  
+}).$mount('#app')

@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <h2>Clicando {{ contador }} vezes.</h2>
+    <div :class="$style.contador">
+        <h3>Clicando {{ contador }} vezes.</h3>
         <button @click="incrementar">Incrementar</button> 
     </div>
 </template>
@@ -16,7 +16,16 @@ export default {
         incrementar(){
             this.contador++
         }
-    }
-    
+    },
+    created(){
+        console.log('CSS modules: ', this.$style)
+    }  
 }
 </script>
+
+<style module>
+.contador{
+    border: 1px solid red;
+}
+
+</style>

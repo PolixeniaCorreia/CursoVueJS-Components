@@ -1,12 +1,28 @@
 import Vue from 'vue'
 
-Vue.component('pcs-component',{
-   data: function(){
+// const data = {
+//    titulo: 'Curso VUEJS', 
+//    contador: 0
+// }
+
+Vue.component('pcs-component', {
+   data: function () {
       return {
-         titulo: 'Curso VUEJS'
+         titulo: 'Curso VUEJS',
+         contador: 0
       }
    },
-   template:'<h1> {{ titulo }} </h1>'
+   methods: {
+      incrementar: function () {
+         this.contador++
+      }
+   },
+
+   template: `
+   <div>
+   <h1> {{ titulo }} </h1>
+   <button @click="incrementar"> Clicado {{ contador }} vezes. </button>
+   </div> `
 })
 
 new Vue({

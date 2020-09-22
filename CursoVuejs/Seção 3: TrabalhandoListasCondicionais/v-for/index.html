@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>VueJs - Guia Completo</title>
+    <script type="text/javascript" src="https://unpkg.com/vue"></script>
+</head>
+<body>
+    <div id="app">
+        <h1>Produtos</h1>
+
+        <ul>
+            <li v-for=" prod in produtos">{{ texto }}: {{ prod }}</li>
+        </ul>
+        <ul>
+                <li v-for=" prod of produtos">{{ texto }}: {{ prod }}</li>
+            </ul>
+
+    </div>
+
+    <script type="text/javascript">
+    
+    new Vue({
+        el: '#app',
+        data:{
+            texto: 'Produto',
+            produtos: [
+                'Monitor',
+                'Teclado',
+                'Mouse'
+            ]
+        }   
+    });
+    </script>
+    
+</body>
+</html>
